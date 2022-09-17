@@ -1,3 +1,9 @@
+# Status: 
+
+* experimental [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://app.swaggerhub.com/apis/mattjh/AZMetAPI/1.0)
+* unlikely to be useful
+* help appreciated
+
 # R API client for azmet
 
 REST API for the Arizona Meteorological Network (AZMet)
@@ -21,38 +27,22 @@ install.packages("httr")
 install.packages("base64enc")
 ```
 
-### Build the package
-
-```sh
-git clone https://github.com/GIT_USER_ID/GIT_REPO_ID
-cd GIT_REPO_ID
-R CMD build .
-R CMD check azmet_0.1.0.tar.gz --no-manual
-R CMD INSTALL --preclean azmet_0.1.0.tar.gz
-```
-
 ### Install the package
 
-```R
-install.packages("azmet")
+```sh
+usethis::install_github("cct-datascience/azmet-r-client")
 ```
 
-To install directly from Github, use `devtools`:
-```R
-install.packages("devtools")
-library(devtools)
-install_github("GIT_USER_ID/GIT_REPO_ID")
-```
-
-To install the package from a local file:
-```R
-install.packages("azmet_0.1.0.tar.gz", repos = NULL, type = "source")
-```
 
 ### Usage
 
 ```R
 library(azmet)
+var_station_id <- "az01" # character | ID of station
+var_date_time_start <- "2019-01-01T00:00" # character | Datetime to start the interval
+var_time_interval <- "P1DT23H"
+
+api_instance$v1_observations_daily_station_id_get(var_station_id)
 ```
 
 ## Documentation for API Endpoints
