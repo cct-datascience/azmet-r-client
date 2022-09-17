@@ -1,7 +1,6 @@
 # Status: 
 
 * experimental [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://app.swaggerhub.com/apis/mattjh/AZMetAPI/1.0)
-* unlikely to be useful
 * help appreciated
 
 # R API client for azmet
